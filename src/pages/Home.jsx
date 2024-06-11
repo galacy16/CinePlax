@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { fetchTrending } from "../services/api";
 import CardComponent from "../components/CardComponent";
-import Footer from "../components/Footer";
 
 const Home = () => {
     const [data, setData] = useState([]);
@@ -40,7 +39,7 @@ const Home = () => {
             >
                 <Heading
                     as="h2"
-                    fontSize={"md"}
+                    fontSize={"xl"}
                     textTransform={"uppercase"}
                     textAlign="center"
                 >
@@ -101,7 +100,6 @@ const Home = () => {
                         )
                     )}
             </Grid>
-            <Footer />
         </Container>
     );
 };

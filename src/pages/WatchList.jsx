@@ -3,7 +3,6 @@ import { useFirestore } from "../services/firestore";
 import { useAuth } from "../context/useAuth";
 import { Container, Flex, Grid, Heading, Spinner } from "@chakra-ui/react";
 import WatchlistCard from "../components/WatchListCard";
-import Footer from "../components/Footer";
 
 const Watchlist = () => {
     const { getWatchlist } = useFirestore();
@@ -28,8 +27,18 @@ const Watchlist = () => {
 
     return (
         <Container maxW={"container.xl"}>
-            <Flex alignItems={"baseline"} gap={"4"} my={"10"}>
-                <Heading as="h2" fontSize={"md"} textTransform={"uppercase"}>
+            <Flex
+                alignItems="center"
+                justifyContent="center"
+                gap={"4"}
+                my={"20"}
+            >
+                <Heading
+                    as="h2"
+                    fontSize={"xl"}
+                    textTransform={"uppercase"}
+                    textAlign={"center"}
+                >
                     Watchlist
                 </Heading>
             </Flex>
@@ -66,7 +75,6 @@ const Watchlist = () => {
                     ))}
                 </Grid>
             )}
-            <Footer />
         </Container>
     );
 };

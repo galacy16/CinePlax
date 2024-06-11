@@ -1,8 +1,18 @@
-# React + Vite
+# Movie Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to CinePlax, a dynamic web application built with React and Vite that allows users to discover and learn more about their favorite movies and TV shows. This project leverages the powerful TMDB API to fetch real-time data, ensuring that you have access to the latest information.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **React**
+-   **Firebase**
+-   **Chakra UI**
+-   **TMDB API**
+
+## Features
+
+-   Browse a wide range of movies and TV shows.
+-   Search functionality to find specific titles.
+-   Detailed view of movie and TV show information.
+-   Responsive design for an optimal experience on various devices.
+-   User authentication and profile management with Firebase.

@@ -4,9 +4,11 @@ import PropTypes from "prop-types";
 
 const Protected = ({ children }) => {
     const { user, isLoading } = useAuth();
+
     if (isLoading) {
         return null;
     }
+
     return <>{user ? children : <Navigate to={"/"} />}</>;
 };
 

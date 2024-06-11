@@ -1,11 +1,13 @@
 import Navbar from "./Navbar";
 import PropTypes from "prop-types";
+import Footer from "../components/Footer";
 
 const Layout = ({ children }) => {
     return (
         <>
             <Navbar />
             <main>{children}</main>
+            <Footer />
         </>
     );
 };

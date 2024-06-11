@@ -11,9 +11,9 @@ const CardComponent = ({ item, type }) => {
                 position={"relative"}
                 transform={"scale(1)"}
                 _hover={{
-                    transform: { base: "scale(1)", md: "scale(1.08)" },
+                    transform: { base: "scale(1)x", md: "scale(1.08)" },
                     transition: "transform 0.5s ease-in-out",
-                    zIndex: 10,
+                    zIndex: "10",
                     "& .overlay": {
                         opacity: 1,
                     },
@@ -51,7 +51,7 @@ const CardComponent = ({ item, type }) => {
                     <Flex
                         alignItems={"center"}
                         justifyContent={"center"}
-                        gap={"2"}
+                        gap={2}
                         mt="4"
                     >
                         <StarIcon fontSize={"small"} />

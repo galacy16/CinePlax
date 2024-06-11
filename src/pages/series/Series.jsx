@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { fetchTvSeries } from "../../services/api";
 import CardComponent from "../../components/CardComponent";
 import PaginationComponent from "../../components/PaginationComponent";
-import Footer from "../../components/Footer";
 
 const Series = () => {
     const [series, setSeries] = useState([]);
@@ -34,11 +33,11 @@ const Series = () => {
     }, [activePage, sortBy]);
 
     return (
-        <Container maxWidth={"container.xl"}>
+        <Container maxW={"container.xl"}>
             <Flex alignItems="center" justifyContent="center" gap={"4"} my="20">
                 <Heading
                     as="h2"
-                    fontSize={"md"}
+                    fontSize={"xl"}
                     textTransform={"uppercase"}
                     textAlign="center"
                 >
@@ -90,7 +89,6 @@ const Series = () => {
                 totalPages={totalPages}
                 setActivePage={setActivePage}
             />
-            <Footer />
         </Container>
     );
 };

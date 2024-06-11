@@ -35,7 +35,6 @@ import {
 import VideoComponent from "../components/VideoComponent";
 import { useAuth } from "../context/useAuth";
 import { useFirestore } from "../services/firestore";
-import Footer from "../components/Footer";
 
 const DetailsPage = () => {
     const router = useParams();
@@ -89,7 +88,7 @@ const DetailsPage = () => {
                 setVideo(video);
 
                 const videos = videosData?.results
-                    ?.filter((video) => video.type !== "Trailer")
+                    ?.filter((video) => video?.type !== "Trailer")
                     ?.slice(0, 10);
                 setVideos(videos);
             } catch (error) {
@@ -111,6 +110,7 @@ const DetailsPage = () => {
             });
             return;
         }
+
         const data = {
             id: details?.id,
             title: details?.title || details?.name,
@@ -165,8 +165,9 @@ const DetailsPage = () => {
                 backgroundPosition={"center"}
                 color={"wheat"}
                 w={"100%"}
-                h={{ base: "auto", md: "500px" }}
+                h={{ base: "auto", md: "700px" }}
                 py={"2"}
+                mt="-3.5"
                 zIndex={"-1"}
                 display={"flex"}
                 alignItems={"center"}
@@ -178,7 +179,7 @@ const DetailsPage = () => {
                         flexDirection={{ base: "column", md: "row" }}
                     >
                         <Image
-                            height={"450px"}
+                            height={"550px"}
                             borderRadius={"sm"}
                             src={`${imagePath}/${details?.poster_path}`}
                         />
@@ -296,9 +297,9 @@ const DetailsPage = () => {
             <Container maxW={"container.xl"} pb="10">
                 <Heading
                     as="h2"
-                    fontSize={"md"}
+                    fontSize={"xl"}
                     textTransform={"uppercase"}
-                    mt="10"
+                    my="10"
                     textAlign={"center"}
                 >
                     Cast
@@ -328,7 +329,8 @@ const DetailsPage = () => {
                                 <Text
                                     fontSize="xs"
                                     textAlign={"center"}
-                                    color="gray.400"
+                                    color="gray.200"
+                                    mb={"4"}
                                 >
                                     {item.character}
                                 </Text>
@@ -338,11 +340,11 @@ const DetailsPage = () => {
 
                 <Heading
                     as="h2"
-                    fontSize={"md"}
+                    fontSize={"xl"}
                     textTransform={"uppercase"}
                     textAlign={"center"}
-                    mt="10"
-                    mb="5"
+                    my="10"
+                    mb="10"
                 >
                     Videos
                 </Heading>
@@ -356,6 +358,7 @@ const DetailsPage = () => {
                                     fontSize={"sm"}
                                     fontWeight={"bold"}
                                     mt="2"
+                                    mb="2"
                                     noOfLines={2}
                                 >
                                     {item?.name}
@@ -363,7 +366,6 @@ const DetailsPage = () => {
                             </Box>
                         ))}
                 </Flex>
-                <Footer />
             </Container>
         </Box>
     );

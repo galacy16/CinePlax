@@ -34,6 +34,13 @@ const Navbar = () => {
         }
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth", // for smooth scrolling
+        });
+    };
+
     return (
         <Box
             py="6"
@@ -47,21 +54,23 @@ const Navbar = () => {
             <Container maxW={"container.xl"}>
                 <Flex justifyContent={"space-between"}>
                     <Link to="/">
-                        <Box
-                            fontSize={"2xl"}
-                            fontWeight={"bold"}
-                            color={"red"}
-                            letterSpacing={"widest"}
-                            fontFamily={"mono"}
-                            display={"flex"}
-                            gap={"2"}
-                        >
-                            <img
-                                src="/logo.png"
-                                width={"30px"}
-                                height={"30px"}
-                            />
-                            CINEPLAX
+                        <Box as="button" onClick={scrollToTop}>
+                            <Box
+                                fontSize={"2xl"}
+                                fontWeight={"bold"}
+                                color={"red"}
+                                letterSpacing={"widest"}
+                                fontFamily={"mono"}
+                                display={"flex"}
+                                gap={"2"}
+                            >
+                                <img
+                                    src="/logo.png"
+                                    width={"30px"}
+                                    height={"30px"}
+                                />
+                                CINEPLAX
+                            </Box>
                         </Box>
                     </Link>
 

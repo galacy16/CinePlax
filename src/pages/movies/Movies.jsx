@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { fetchMovies } from "../../services/api";
 import CardComponent from "../../components/CardComponent";
 import PaginationComponent from "../../components/PaginationComponent";
-import Footer from "../../components/Footer";
 
 const Movies = () => {
     const [movies, setMovies] = useState([]);
@@ -34,11 +33,11 @@ const Movies = () => {
     }, [activePage, sortBy]);
 
     return (
-        <Container maxWidth={"container.xl"}>
+        <Container maxW={"container.xl"}>
             <Flex alignItems="center" justifyContent="center" gap={"4"} my="20">
                 <Heading
                     as="h2"
-                    fontSize={"md"}
+                    fontSize={"xl"}
                     textTransform={"uppercase"}
                     textAlign="center"
                 >
@@ -90,7 +89,6 @@ const Movies = () => {
                 totalPages={totalPages}
                 setActivePage={setActivePage}
             />
-            <Footer />
         </Container>
     );
 };

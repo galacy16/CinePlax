@@ -11,7 +11,6 @@ import {
 import { searchData } from "../../services/api";
 import CardComponent from "../../components/CardComponent";
 import PaginationComponent from "../../components/PaginationComponent";
-import Footer from "../../components/Footer";
 
 const Search = () => {
     const [searchValue, setSearchValue] = useState("");
@@ -39,7 +38,7 @@ const Search = () => {
     };
 
     return (
-        <Container maxWidth={"container.xl"}>
+        <Container maxW={"container.xl"}>
             <Flex
                 alignItems="center"
                 justifyContent="center"
@@ -48,7 +47,7 @@ const Search = () => {
             >
                 <Heading
                     as="h2"
-                    fontSize={"md"}
+                    fontSize={"xl"}
                     textTransform={"uppercase"}
                     textAlign="center"
                 >
@@ -59,6 +58,7 @@ const Search = () => {
             <form onSubmit={handleSearch}>
                 <Input
                     placeholder="Search movies, TV series..."
+                    _placeholder={{ color: "gray.100" }}
                     value={tempSearchValue}
                     onChange={(e) => {
                         setTempSearchValue(e.target.value);
@@ -73,7 +73,7 @@ const Search = () => {
             )}
 
             {data?.length === 0 && !isLoading && (
-                <Heading textAlign={"center"} as="h3" fontSize={"sm"} mt="10">
+                <Heading textAlign={"center"} as="h3" fontSize={"md"} mt="10">
                     No results found
                 </Heading>
             )}
@@ -111,7 +111,6 @@ const Search = () => {
                     setActivePage={setActivePage}
                 />
             )}
-            <Footer />
         </Container>
     );
 };
