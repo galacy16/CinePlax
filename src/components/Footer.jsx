@@ -40,7 +40,7 @@ const Footer = () => {
                                 gap={"2"}
                             >
                                 <img
-                                    src="../../public/logo.png"
+                                    src="/logo.png"
                                     width={"30px"}
                                     height={"30px"}
                                 />
