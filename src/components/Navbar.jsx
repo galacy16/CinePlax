@@ -106,20 +106,9 @@ const Navbar = () => {
                                 </MenuButton>
                                 <MenuList>
                                     <Link to="/watchlist">
-                                        <MenuItem
-                                            color="orange.900"
-                                            _hover={{ bg: "gray.300" }}
-                                        >
-                                            Watchlist
-                                        </MenuItem>
+                                        <MenuItem>Watchlist</MenuItem>
                                     </Link>
-                                    <MenuItem
-                                        onClick={logout}
-                                        color="orange.900"
-                                        _hover={{ bg: "gray.300" }}
-                                    >
-                                        Logout
-                                    </MenuItem>
+                                    <MenuItem onClick={logout}>Logout</MenuItem>
                                 </MenuList>
                             </Menu>
                         )}
