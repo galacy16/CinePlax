@@ -57,7 +57,7 @@ const Navbar = () => {
                         <Box as="button" onClick={scrollToTop}>
                             <Box
                                 fontSize={"2xl"}
-                                fontWeight={"bold"}
+                                fontWeight={"700"}
                                 color={"red"}
                                 letterSpacing={"widest"}
                                 fontFamily={"mono"}
@@ -81,6 +81,8 @@ const Navbar = () => {
                         display={{ base: "none", md: "flex" }}
                         color={"orange.500"}
                         textTransform={"uppercase"}
+                        fontSize={"lg"}
+                        fontWeight={"600"}
                     >
                         <Link to={"/"} _hover={{ color: "orange.700" }}>
                             Home
@@ -106,9 +108,13 @@ const Navbar = () => {
                                 </MenuButton>
                                 <MenuList>
                                     <Link to="/watchlist">
-                                        <MenuItem>Watchlist</MenuItem>
+                                        <MenuItem color={"wheat"}>
+                                            Watchlist
+                                        </MenuItem>
                                     </Link>
-                                    <MenuItem onClick={logout}>Logout</MenuItem>
+                                    <MenuItem onClick={logout} color={"wheat"}>
+                                        Logout
+                                    </MenuItem>
                                 </MenuList>
                             </Menu>
                         )}
