@@ -11,7 +11,7 @@ const Footer = () => {
     };
 
     return (
-        <Box py="20" mt="6" bg="gray.900">
+        <Box py="20" mt="6" bg="blackAlpha.700">
             <Container maxW={"container.xl"} px={"20"}>
                 <Flex
                     direction={{ base: "column", md: "row" }}
