@@ -58,7 +58,7 @@ const Navbar = () => {
                             <Box
                                 fontSize={"2xl"}
                                 fontWeight={"700"}
-                                color={"red"}
+                                color={"orange.500"}
                                 letterSpacing={"widest"}
                                 fontFamily={"mono"}
                                 display={"flex"}

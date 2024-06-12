@@ -23,7 +23,7 @@ const Footer = () => {
                             <Box
                                 fontSize={"2xl"}
                                 fontWeight={"bold"}
-                                color={"red"}
+                                color={"orange.500"}
                                 letterSpacing={"widest"}
                                 fontFamily={"mono"}
                                 display={"flex"}
