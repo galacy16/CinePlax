@@ -48,7 +48,7 @@ const Navbar = () => {
             position="sticky"
             top="0"
             zIndex="sticky"
-            bg="blackAlpha.700"
+            bg="blackAlpha.400"
             opacity={"0.98"}
         >
             <Container maxW={"container.xl"}>
