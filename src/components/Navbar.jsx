@@ -48,7 +48,7 @@ const Navbar = () => {
             position="sticky"
             top="0"
             zIndex="sticky"
-            bgGradient="linear(to-r, teal.800, gray.900)"
+            bgGradient="linear(to-r, pink.900, gray.900)"
             opacity={"0.98"}
         >
             <Container maxW={"container.xl"}>
